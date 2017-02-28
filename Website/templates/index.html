@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<!--
+Au<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>My Skills a Resume Template  Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
+{% load static %}
+	
+<link href="{% static "style.css" %}" rel="stylesheet" type="text/css" media="all" />
+	
+<link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" media="all" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="My Skills Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="{% static "js/jquery-1.11.1.min.js" %}"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="{% static "js/move-top.js" %}"></script>
+<script type="text/javascript" src="{% static "js/easing.js" %}"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!---End-smoth-scrolling---->
+ 
+</head>
+<body>
+<!--start-header-section-->
+<div class="header-section">
+	<div class="continer">
+		<img BORDER="0" ALIGN="left"  style="text-align: left; padding-left: 80px; padding-right: 80px;" src="{% static "" %}{{email}}.jpeg" onerror="this.src='{% static "images/p1.png" %}';"">  <table >
+  
+  
+  <tr>
+    <th><h1 style="text-align: center;padding-top: 30px;padding-bottom: 30px; color: #ffffff;">{{first_name}} {{last_name}}<span></span></h1></th>
+  </tr>
+  <tr>
+    <th><h2 style="text-align: center;padding-top: 30px;padding-bottom: 30px; color: #ffffff;">Email:<span></span></h2></th> </td>
+    <th><h3 style="text-align: center;padding-top: 30px;padding-bottom: 30px; color: #ffffff;">{{email}}<span></span></h3></th></td>
+  </tr>
+  <tr>
+    <th><h2 style="text-align: center;padding-top: 30px;padding-bottom: 30px; color: #ffffff;">Address:<span></span></h2></th></td>
+    <th><h3 style="text-align: center;padding-top: 30px;padding-bottom: 30px; color: #ffffff;">{{address}}<span></span></h3></th></td>
+  </tr>
+  <tr>
+    <th><h2 style="text-align: center;padding-top: 30px;padding-bottom: 30px; color: #ffffff;">Phone:<span></span></h2></th></td>
+    <th><h3 style="text-align: center;padding-top: 30px;padding-bottom: 30px; color: #ffffff;">{{telephone}}<span></span></h3></th></td>
+  </tr>
+</table> 
+	</div>
+</div>
+
+<div class="service-grids">
+	<h1 style="text-align: center;padding-top: 30px;padding-bottom: 30px; color: #337ab7;">Welcome to Heart Pulse tracker<span></span></h1>
+	<div class="col-md-4 service-grid" style="text-align: center;">
+		<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+		<h4>PERSONAL HEALTH INFO</h4>
+		<span> </span>
+		<p>Lets take a look of your health check results.</p>
+	</div>
+	<div class="col-md-4 service-grid" style="text-align: center;">
+		<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+		<h4>HOSPITAL NEARBY</h4>
+		<span> </span>
+		<p>Help you find the nearest hospital.</p>
+	</div>
+	<div class="col-md-4 service-grid" style="text-align: center;">
+		<span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+		<h4>HEART DISEASE KNOWLEDGE {{latest_question_list}}</h4>
+		<span></span>
+		<p>There is some knowledge we want to share.</p>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<!--end services-section-->
+
+<!--start-footer-section-->
+<!--<div class="footer-top">-->
+	<p style="text-align: right; color: #337ab7; padding-top: 30px; vertical-align: bottom;">&copy; 2017 <span></span> All rights reserved | Design by LakeheadU Students</p>
+<!--</div>-->
+<!--end-footer-section-->
+</body>
+</html>
+
+{% endblock %}
