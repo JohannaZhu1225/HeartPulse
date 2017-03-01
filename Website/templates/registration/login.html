@@ -2,13 +2,44 @@
 {% load i18n %}
 
 {% block content %}
-<form method="post" action=".">
-  {% csrf_token %} 
-  {{ form.as_p }}
 
-  <input type="submit" value="{% trans 'Log in' %}" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</form>
+<head>
+<title>Register Login Widget Flat Responsive Widget Template :: w3layouts</title>
+<!--Custom Theme files-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+{% load static %}
+<link href="{% static "/login/css/style.css" %}" rel="stylesheet" type="text/css" media="all" />
+<!--web-fonts-->
+<link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
+<!--//web-fonts-->
+</head>
+<body>
+	<h1>Heart Pulse Tracker</h1>
+	<!-- main -->
+	<div class="main">
+		<!--login-profile-->
+		<div class="w3">
+			<div class="signin-form profile">
+				<h3>Login</h3>
+				<form method="post" action=".">
+					  {% csrf_token %} 
+					  {{ form.as_p }}
+				  <input type="submit" value="{% trans 'Log in' %}" />
+				  <input type="hidden" name="next" value="{{ next }}" />
+				</form>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!--//signin-form-->	
+	</div>
+	<div class="copyright">
+		<p style="text-align: right; color: #337ab7; vertical-align: bottom;">&copy; 2017 <span></span> All rights reserved | Design by LakeheadU Students</p>
+	</div>					
+</body>
 
 <p>{% trans "Forgot password" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
 <p>{% trans "Not member" %}? <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>

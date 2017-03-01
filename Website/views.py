@@ -10,7 +10,6 @@ from django.http import HttpResponseRedirect
 
 
 def index(request):
-#	latest_question_list = EmailAddress.objects.all()
 	context = {}
 	if request.user.is_authenticated():
 		query = EmailAddress.objects.filter(email=request.user.email)
@@ -28,12 +27,11 @@ def index(request):
 				   'date_joined':request.user.date_joined,
 				   'address':emailAddress.address,
 				   'telephone':emailAddress.phone_number,
-				   'comments':emailAddress.comments,
-				   'imageData':emailAddress.imageData}
+				   'comments':emailAddress.comments}
 		
 		return render(request, 'index.html', context)
 	else:
-		return HttpResponseRedirect('/accounts/login/')
+		return render(request, 'home.html', context)
 
 def profile(request):
 #	email = EmailAddress.objects.filter(email="")
